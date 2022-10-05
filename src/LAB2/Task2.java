@@ -12,7 +12,6 @@ public class Task2 {
         long sum = 0;
         long start = System.currentTimeMillis();
 
-        // O(n2)
         for (int i = 1; i <= n; i++)
             for (int j = 1; j <= n; j++)
                 sum += i + j;
