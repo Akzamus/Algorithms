@@ -1,13 +1,14 @@
 package LAB4;
 
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+
 public class Task4 {
 
     public int maxProduct(int[] nums) {
-        int max = 0;
-        for (int i = 0; i < nums.length; i++)
-            for (int j = 0; j < nums.length; j++)
-                if(j != i)
-                    max = Math.max((nums[i]-1)*(nums[j]-1), max);
-        return max;
+        Queue<Integer> queue = new PriorityQueue<>(Comparator.reverseOrder());
+        for (int num : nums) queue.offer(num);
+        return (queue.poll()-1)*(queue.poll()-1);
     }
 }
