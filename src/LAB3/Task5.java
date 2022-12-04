@@ -21,7 +21,6 @@ public class Task5 {
                 result += c;
             }
         }
-        System.out.println(result);
         return result;
     }
 }

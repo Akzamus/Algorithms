@@ -1,29 +1,48 @@
 package LAB5;
 
-public class Task5 {
-    public int partition (int a[], int start, int end) {
-        int pivot = a[end];
-        int i = (start - 1);
+import java.util.Arrays;
 
-        for (int j = start; j <= end - 1; j++) {
-            if (a[j] < pivot) {
-                i++;
-                int t = a[i];
-                a[i] = a[j];
-                a[j] = t;
-            }
-        }
-        int t = a[i+1];
-        a[i + 1] = a[end];
-        a[end] = t;
-        return (i + 1);
+public class Task5 {
+
+    public static void main(String[] args) {
+        int[] arr = { 8, 0, 4, 7, 3, 7, 10, 12, -3 };
+        int low = 0;
+        int high = arr.length - 1;
+
+        System.out.println("Given Array: " + Arrays.toString(arr));
+        quickSort(arr, low, high);
+        System.out.println("Sorted array: " + Arrays.toString(arr));
     }
 
-    public void quick(int a[], int start, int end) {
-        if (start < end) {
-            int p = partition(a, start, end);
-            quick(a, start, p - 1);
-            quick(a, p + 1, end);
+    public static void quickSort(int[] array, int left, int right) {
+        if (array.length == 0 || left >= right) return;
+
+        int middle = left + (right - left) / 2;
+        int support = array[middle];
+        int i = left, j = right;
+
+        while (i <= j) {
+            while (array[i] < support) {
+                i++;
+            }
+
+            while (array[j] > support) {
+                j--;
+            }
+
+            if (i <= j) {
+                int temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+                i++;
+                j--;
+            }
         }
+
+        if (left < j)
+            quickSort(array, left, j);
+
+        if (right > i)
+            quickSort(array, i, right);
     }
 }
