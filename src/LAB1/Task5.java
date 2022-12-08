@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 public class Task5 {
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("1p"));
+        System.out.println(isPalindrome("12345"));
     }
 
     public static boolean isPalindrome(String s) {

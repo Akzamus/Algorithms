@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Task1 {
     public static void main(String[] args) {
-        System.out.println(convert("29234652", 10, 36));
+        System.out.println(convert("1101", 2, 10));
     }
 
     public static String convert(String originalNumber, int fromRadix, int toRadix) {
