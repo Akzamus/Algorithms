@@ -19,7 +19,6 @@ public class Task1 {
 
         for (; decimalNumber > 0; decimalNumber /= toRadix)
             result.insert(0, digits.get(decimalNumber % toRadix));
-
         return result.toString();
     }
 
