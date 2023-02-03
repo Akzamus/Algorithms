@@ -1,4 +1,4 @@
-package additionalTasks;
+package additionalTasks.task2;
 
 import java.io.File;
 import java.io.FileNotFoundException;

@@ -1,4 +1,4 @@
-package additionalTasks;
+package additionalTasks.task2;
 
 public class Building {
     protected int id;
