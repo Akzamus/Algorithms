@@ -1,33 +1,59 @@
 package yandexTraining3;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Sntp {
 
-    public static void main(String[] args) throws ParseException {
-        Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
-        SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
-        dateFormat.setLenient(false);
+    public static void main(String[] args) {
 
-        Date a = dateFormat.parse(scanner.nextLine());
-        Date b = dateFormat.parse(scanner.nextLine());
-        Date c = dateFormat.parse(scanner.nextLine());
+        int[] sent = scanInput();
+        int[] processed = scanInput();
+        int[] accepted = scanInput();
 
-        if(c.before(a)) {
-            Calendar calendar = Calendar.getInstance();
-            calendar.setTime(c);
-            calendar.add(Calendar.HOUR, 24);
-            c = calendar.getTime();
+        int sentTimeInSec = sent[0] * 3600 + sent[1] * 60 + sent[2];
+        int processedTimeInSec = processed[0] * 3600 + processed[1] * 60 + processed[2];
+        int accTimeInSec =  accepted[0] * 3600 + accepted[1] * 60 + accepted[2];
+        int diff;
+
+        if(sentTimeInSec > accTimeInSec) {
+            diff = 24 * 3600 - (sentTimeInSec - accTimeInSec);
+        } else {
+            diff = accTimeInSec - sentTimeInSec;
         }
 
-        long diff = Math.round((double)(c.getTime() - a.getTime()) / 2);
-        Date exactTime = new Date(b.getTime() + diff);
-        System.out.println(dateFormat.format(exactTime));
+        double resultTimeInSec = processedTimeInSec + (diff / 2.0);
+        if(resultTimeInSec >= 24 * 3600) {
+            resultTimeInSec -= 24 * 3600;
+        }
+
+        int resultH = (int)(resultTimeInSec / 3600);
+        resultTimeInSec -= resultH * 3600;
+        int resultM = (int)(resultTimeInSec / 60);
+        resultTimeInSec -= resultM * 60;
+        int resultS = (int)Math.round(resultTimeInSec);
+
+        if(resultS == 60) {
+            resultM++;
+            resultS = 0;
+        }
+
+        String result = "";
+
+        if (resultH < 10) result += "0";
+        result += resultH + ":";
+        if (resultM < 10) result += "0";
+        result += resultM + ":";
+        if(resultS < 10) result += "0";
+        result += resultS;
+        System.out.println(result);
+    }
+
+    private static int[] scanInput() {
+        return Arrays.stream(scanner.nextLine().split(":"))
+                     .mapToInt(Integer::parseInt)
+                     .toArray();
     }
 }
