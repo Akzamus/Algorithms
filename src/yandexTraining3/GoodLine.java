@@ -1,6 +1,7 @@
 package yandexTraining3;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class GoodLine {
 
@@ -38,3 +39,13 @@ public class GoodLine {
         System.out.println(result);
     }
 }
+
+class Main {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        final int N = in.nextInt();
+        int[] quantity = new int[N];
+    }
+}
+
