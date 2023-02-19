@@ -1,4 +1,4 @@
-package yandexTraining3.Histogram;
+package yandexTraining3.histogram;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
