@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -12,6 +12,7 @@ public class Sntp {
         int[] sent = scanInput();
         int[] processed = scanInput();
         int[] accepted = scanInput();
+        scanner.close();
 
         int sentTimeInSec = sent[0] * 3600 + sent[1] * 60 + sent[2];
         int processedTimeInSec = processed[0] * 3600 + processed[1] * 60 + processed[2];

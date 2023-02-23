@@ -1,16 +1,18 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.Scanner;
 
 public class ControlWork {
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
 
-        final int N = input.nextInt();
-        final int K = input.nextInt();
-        int row = input.nextInt();
-        int col = input.nextInt();
+        final int N = in.nextInt();
+        final int K = in.nextInt();
+        int row = in.nextInt();
+        int col = in.nextInt();
+
+        in.close();
 
         int seat = (row - 1) * 2 + (col - 1);
         int deskNumber = seat / 2 + 1;

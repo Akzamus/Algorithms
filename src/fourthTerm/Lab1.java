@@ -1,7 +1,5 @@
 package fourthTerm;
 
-import java.util.Stack;
-
 public class Lab1 {
 
     public static void main(String[] args) {

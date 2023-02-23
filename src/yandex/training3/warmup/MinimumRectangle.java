@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.*;
 
@@ -14,6 +14,9 @@ public class MinimumRectangle {
                               .mapToInt(str -> Integer.parseInt(str))
                               .toArray();
         }
+
+        in.close();
+
         printMinimalRectanglePoints(points);
     }
 

@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 import java.util.*;
 
 public class CollectorDiego {
@@ -16,6 +16,8 @@ public class CollectorDiego {
         int[] requests = Arrays.stream(in.nextLine().split(" "))
                 .mapToInt(Integer::parseInt)
                 .toArray();
+
+        in.close();
 
         for (int num : requests)
             System.out.println(binarySearch(cards, num));

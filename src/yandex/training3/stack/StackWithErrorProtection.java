@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.stack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +19,8 @@ public class StackWithErrorProtection {
             input.add(str.split(" "));
             if(str.equals("exit")) break;
         }
+
+        in.close();
 
         for(String[] arr : input) {
             command = arr[0];

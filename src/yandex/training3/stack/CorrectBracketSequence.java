@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.stack;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,6 +12,7 @@ public class CorrectBracketSequence {
         System.out.println(
                 isCorrectBracketSequence(in.nextLine()) ? "yes" : "no"
         );
+        in.close();
     }
 
     private static boolean isCorrectBracketSequence(String str) {

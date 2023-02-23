@@ -1,7 +1,5 @@
 package fourthTerm.Lab2;
 
-import java.util.*;
-
 public class LeetCode2424 {
 
 }

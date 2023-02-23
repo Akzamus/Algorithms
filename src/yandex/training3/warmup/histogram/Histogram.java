@@ -1,4 +1,4 @@
-package yandexTraining3.histogram;
+package yandex.training3.warmup.histogram;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

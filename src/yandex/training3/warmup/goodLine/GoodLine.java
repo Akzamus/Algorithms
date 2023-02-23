@@ -1,17 +1,19 @@
-package yandexTraining3.goodLine;
+package yandex.training3.warmup.goodLine;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.*;
 
 public class GoodLine {
 
-    private static final String inputPath = "src/yandexTraining3/goodLine/input.txt";
+    private static final String inputPath = "src/yandex/training3/warmup/goodLine/input.txt";
 
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(inputPath));
         long[] quantity = reader.lines().skip(1).mapToLong(Long::parseLong).toArray();
+        reader.close();
 
 
         long[] sort = Arrays.stream(quantity).distinct().sorted().toArray();

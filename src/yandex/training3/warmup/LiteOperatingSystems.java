@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.*;
 
@@ -13,6 +13,7 @@ public class LiteOperatingSystems {
         for (int i = 0; i < N; i++) {
             addWithSectorOverwritingIfIsBusy(in.nextInt(), in.nextInt());
         }
+        in.close();
         System.out.println(sectors.size());
     }
 

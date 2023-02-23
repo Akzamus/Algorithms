@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.queue;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
@@ -10,8 +10,10 @@ public class PyramidSorting {
         Scanner in = new Scanner(System.in);
         final int N = in.nextInt();
         Queue<Integer> queue = new PriorityQueue<>(N);
+
         for (int i = 0; i < N; i++)
             queue.add(in.nextInt());
+        in.close();
 
         while (!queue.isEmpty()) System.out.println(queue.poll());
     }

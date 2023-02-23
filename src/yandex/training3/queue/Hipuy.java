@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.queue;
 
 import java.util.*;
 
@@ -15,5 +15,7 @@ public class Hipuy {
             if(arr.length == 1) System.out.println(queue.poll());
             else                queue.add(Integer.parseInt(arr[1]));
         }
+
+        in.close();
     }
 }

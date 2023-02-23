@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.stack;
 
 import java.util.Scanner;
 import java.util.Stack;

@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.*;
 
@@ -8,6 +8,7 @@ public class BeautifulString {
         Scanner in = new Scanner(System.in);
         int k = Integer.parseInt(in.nextLine());
         String input = in.nextLine();
+        in.close();
         printBeautifulString(input, k);
     }
 

@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.queue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -52,6 +52,7 @@ public class DecWithErrorProtection {
 
                 case "exit" -> {
                     System.out.println("bye");
+                    in.close();
                     System.exit(0);
                 }
             }

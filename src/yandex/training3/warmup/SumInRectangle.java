@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -31,6 +31,8 @@ public class SumInRectangle {
                                 .mapToInt(str -> Integer.parseInt(str) - 1)
                                 .toArray();
         }
+
+        in.close();
 
         processRequests(matrix, requests);
     }

@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.stack;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -23,6 +23,7 @@ public class SortingOfWagonsLite {
                 stack.push(car);
             }
         }
+        scanner.close();
 
         while (!stack.isEmpty() && stack.peek() == expected) {
             stack.pop();

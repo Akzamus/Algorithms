@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.queue;
 
 import java.util.*;
 
@@ -16,6 +16,8 @@ public class DrunkardGame {
         for (int i = 0; i < 5; i++) {
             playerTwo.add(in.nextInt());
         }
+
+        in.close();
 
         int round = 0;
         while (!playerOne.isEmpty() && !playerTwo.isEmpty()) {

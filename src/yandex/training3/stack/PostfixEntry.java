@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.stack;
 
 import java.util.Scanner;
 import java.util.Stack;
@@ -8,8 +8,10 @@ public class PostfixEntry {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         Stack<Integer> stack = new Stack<>();
+        String[] input = in.nextLine().split(" ");
+        in.close();
 
-        for (String str : in.nextLine().split(" ")) {
+        for (String str : input) {
             switch (str) {
                 case "+" -> stack.push(stack.pop() + stack.pop());
                 case "-" -> {

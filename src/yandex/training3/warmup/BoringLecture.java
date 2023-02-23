@@ -1,4 +1,4 @@
-package yandexTraining3;
+package yandex.training3.warmup;
 
 import java.util.*;
 
@@ -7,6 +7,7 @@ public class BoringLecture {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         String input = in.nextLine();
+        in.close();
         printCharAndNumInWordsThatCanBeMadeOfThisWord(input);
     }
 
