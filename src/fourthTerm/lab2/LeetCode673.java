@@ -1,4 +1,4 @@
-package fourthTerm.Lab2;
+package fourthTerm.lab2;
 
 public class LeetCode673 {
 
