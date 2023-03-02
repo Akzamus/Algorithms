@@ -2,7 +2,6 @@ package fourthTerm.lab3;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class LeetCode207 {
@@ -30,7 +29,7 @@ public class LeetCode207 {
             }
         }
 
-        for(int i=0; i<numCourses; i++)
+        for(int i = 0; i < numCourses; i++)
             if(!canFinishDFS(map, visit, i))
                 return false;
 
@@ -52,5 +51,4 @@ public class LeetCode207 {
 
         return true;
     }
-
 }

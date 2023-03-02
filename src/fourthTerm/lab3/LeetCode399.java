@@ -6,11 +6,10 @@ public class LeetCode399 {
 
     public double[] calcEquation(List<List<String>> equations, double[] values,
                                  List<List<String>> queries) {
+
         double[] ans = new double[queries.size()];
-        // Graph.get(A).get(B) := A / B
         Map<String, Map<String, Double>> graph = new HashMap<>();
 
-        // Construct the graph
         for (int i = 0; i < equations.size(); ++i) {
             final String A = equations.get(i).get(0);
             final String B = equations.get(i).get(1);
@@ -32,7 +31,6 @@ public class LeetCode399 {
         return ans;
     }
 
-    // Returns A / C
     private double divide(Map<String, Map<String, Double>> graph, final String A, final String C,
                           Set<String> seen) {
         if (A.equals(C))
@@ -43,9 +41,9 @@ public class LeetCode399 {
         for (final String B : graph.get(A).keySet()) {
             if (seen.contains(B))
                 continue;
-            final double res = divide(graph, B, C, seen); // B / C
-            if (res > 0)                                  // Valid result
-                return graph.get(A).get(B) * res;           // A / C = (A / B) * (B / C)
+            final double res = divide(graph, B, C, seen);
+            if (res > 0)
+                return graph.get(A).get(B) * res;
         }
 
         return -1.0; // Invalid result
