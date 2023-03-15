@@ -2,7 +2,7 @@ package fourthTerm.lab4;
 
 import java.util.*;
 
-public class MinCostToConnectAllPoints {
+public class LeetCode1584 {
 
     private static Map<Integer, Integer> parent = new HashMap<>();
 
