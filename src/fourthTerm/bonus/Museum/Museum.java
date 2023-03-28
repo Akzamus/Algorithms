@@ -1,4 +1,4 @@
-package fourthTerm.bonus;
+package fourthTerm.bonus.Museum;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -16,7 +16,7 @@ public class Museum {
                   .skip(1)
                   .map(s -> {
                       String[] times = s.split(" ");
-                      return new int[]{
+                      return new int[] {
                               getTimeInMinutes(times[0]),
                               getTimeInMinutes(times[1])
                       };
