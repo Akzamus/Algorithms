@@ -1,4 +1,4 @@
-package fourthTerm.bonus.Museum;
+package fourthTerm.bonus.museum;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 
 public class Museum {
-    private static final String inputPath = "src/fourthTerm/bonus/input.txt";
+    private static final String inputPath = "src/fourthTerm/bonus/museum/input.txt";
 
     public static void main(String[] args) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(inputPath))) {
